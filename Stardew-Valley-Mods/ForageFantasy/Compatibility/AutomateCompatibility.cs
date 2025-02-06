@@ -29,7 +29,7 @@
                 var mushroomBox = AccessTools.TypeByName("Pathoschild.Stardew.Automate.Framework.MachineWrapper");
 
                 harmony.Patch(
-                   original: AccessTools.Method(tapper, "OnOutputCollected"),
+                   original: AccessTools.Method(tapper, "GetOutput"),
                    prefix: new HarmonyMethod(typeof(AutomateCompatibility), nameof(PatchTapperMachineOutput)));
 
                 harmony.Patch(
